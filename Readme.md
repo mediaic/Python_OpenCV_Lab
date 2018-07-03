@@ -18,4 +18,4 @@ The lab practice referred to [OpenCVtutorial](http://opencv-python-tutroals.read
 
 5. sklearn
 
-    ``` pip3 install sklearn
+    ``` pip3 install sklearn ```
