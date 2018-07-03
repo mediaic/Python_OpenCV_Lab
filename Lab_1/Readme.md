@@ -3,7 +3,7 @@
  - Image Operation
  - Image Smoothing
  - Image Denoising
- - Image PCA analysis 
+ - Image PCA & Classification 
 
 
 **Directory Tree**
