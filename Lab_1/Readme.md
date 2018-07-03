@@ -7,10 +7,10 @@
 
 
 **Directory Tree**
-```bash
+```
 |__Lab1
-|	 |__ Readme.md
-|	 |__ Face_dataset/
+|  |__ Readme.md
+|  |__ Face_dataset/
 |  |__ fig.jpg
 ```
 
