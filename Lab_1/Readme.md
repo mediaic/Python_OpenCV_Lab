@@ -1,4 +1,16 @@
 # Lab1 
-Image Smoothing, Image Denoising, Image PCA
+**What you will learn :**
+ - Image Operation
+ - Image Smoothing
+ - Image Denoising
+ - Image PCA analysis 
 
-## Description
+
+**Directory Tree**
+```bash
+|--	Lab1
+|	|__ Readme.md
+|	|__ Face_dataset/
+|   |__ figure.jpg
+```
+## 1. Image Operation
