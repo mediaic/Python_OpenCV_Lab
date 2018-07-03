@@ -81,7 +81,7 @@ The dataset you need is under `Face_dataset/` directory, which contains 56×46 p
 	- Be careful the values in eigenvectors after PCA !  (*cv2.PCACompute()*)
 	- hint: 　255 * (shifted **x**/ max(shifted **x**))
 
-2. Take **7_2.png**, and project it onto the above PCA eigenspace. Reconstruct this image using the first n = 3, 100 eigenfaces. For each n, compute the mean square error (MSE) between the reconstructed face image and "1_1.png". Please save these reconstructed images, and record the corresponding MSE values.
+2. Take **7_2.png**, and project it onto the above PCA eigenspace. Reconstruct this image using the first n = 3, 100 eigenfaces. For each n, compute the mean square error (MSE) between the reconstructed face image and **7_2.png**. Please save these reconstructed images, and record the corresponding MSE values.
 
 3. Apply the **k-nearest neighbors classifier** to recognize **test set** images. For simplicity, try k={1,3} and n = {3,100}.  Report the recognition rate on the test set with different (k,n) pairs.
 	- hint: *sklearn.neighbors.KNeighborsClassifier()*
