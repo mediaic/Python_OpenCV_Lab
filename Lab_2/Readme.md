@@ -29,6 +29,6 @@ You can only use the python packages below:
  - scipy  ( only  for reading .mat file)
 
 ## 1. Color & Texture Segmentation
-![zebra](./zebra.jpg)
 
+<img src="zebra.jpg" alt="zebra" width="360px"/> <img src="mountain.jpg" alt="mountain" width="320px"/>
 
