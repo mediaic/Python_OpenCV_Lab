@@ -27,7 +27,7 @@ You can only use the python packages below:
  - cv2 (opencv)
  - matplotlib
  - sklearn
- - scipy  ( only  for reading .mat file)
+ - scipy  ( only  for reading .mat file or compute distance, eg. `scipy.spatial.distance.euclidean()`)
 
 ## 1. Color & Texture Segmentation
 
@@ -105,6 +105,14 @@ for simplicity). The centroid of each cluster then indicates a visual word.
 
 	<img src="./image/BOW.png" alt="bow"/>
 	
-	Now compute BoW of training images in Train-100, resulting in a 500×c matrix. Choose one image from each category (5 images) and plot their **Hard-Sum**, **Soft-Sum**, and **Soft-Max**, respectively. Can you expect which BoW strategy results in better classification results and why?
+	Now compute BoW of training images in Train-100 with the saved "visual_words.npy", resulting in a 500×50 matrix. Choose one image from each category (5 category) and plot their **Hard-Sum**, **Soft-Sum**, and **Soft-Max**, respectively. Can you expect which BoW strategy results in better classification results and why?
 	
-	<img src="./image/hardsum.jpg" alt="hs"/> <img src="./image/softsum.jpg" alt="ss"/> <img src="./image/softmax.jpg" alt="sm"/>
+	<img src="./image/hardsum.jpg" alt="hs" width="360px"/> <img src="./image/softsum.jpg" alt="ss" width="360px" /> <img src="./image/softmax.jpg" alt="sm" width="360px"/>
+
+4. ) Finally, We adopt the k-nearest neighbors classifier (**KNN**) to perform classification
+using the above BoW features.
+
+	Use Train-100 as the training data and Test-100 for testing (you may choose k = 3
+for simplicity). Report the classification accuracy using **Hard-Sum**, **Soft-Sum**, and
+**Soft-Max**. Are the results as expected (based on your observation on different BoW
+features in 3.)? If not, why?

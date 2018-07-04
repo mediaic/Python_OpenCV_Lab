@@ -14,3 +14,4 @@ The lab practice referred to [OpenCVtutorial](http://opencv-python-tutroals.read
 -  numpy: ``` pip3 install numpy ```
 - matplotlib:  ``` pip3 install matplotlib ```
 - sklearn:  ``` pip3 install sklearn ```
+- scipy: ```pip3 install scipy```
