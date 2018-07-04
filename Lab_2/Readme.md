@@ -107,4 +107,4 @@ for simplicity). The centroid of each cluster then indicates a visual word.
 	
 	Now compute BoW of training images in Train-100, resulting in a 500×c matrix. Choose one image from each category (5 images) and plot their **Hard-Sum**, **Soft-Sum**, and **Soft-Max**, respectively. Can you expect which BoW strategy results in better classification results and why?
 	
-	<img src="./image/hardsum.png" alt="hs"/> <img src="./image/softsum.png" alt="ss"/> <img src="./image/softmax.png" alt="sm"/>
+	<img src="./image/hardsum.jpg" alt="hs"/> <img src="./image/softsum.jpg" alt="ss"/> <img src="./image/softmax.jpg" alt="sm"/>
