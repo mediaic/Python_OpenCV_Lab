@@ -1,6 +1,6 @@
 ﻿# Lab_2 
 
-This is the simplified version of DLCV course HW2.
+This is the simplified version of NTU Deep Learning for Computer Vision (DLCV) course HW2.
 
 **What you will learn :**
 - Color Segmentation
@@ -11,8 +11,10 @@ This is the simplified version of DLCV course HW2.
 
 **Directory Tree**
 ```
-|__Lab1
+|__Lab2
 |  |__ Readme.md
+|  |__ train-100/
+|  |__ test-100/
 |  |__ image/
 |  |__ filterBank.mat
 |  |__ mountain.jpg
@@ -107,7 +109,7 @@ for simplicity). The centroid of each cluster then indicates a visual word.
 	
 	Now compute BoW of training images in Train-100 with the saved "visual_words.npy", resulting in a 500×50 matrix. Choose one image from each category (5 category) and plot their **Hard-Sum**, **Soft-Sum**, and **Soft-Max**, respectively. Can you expect which BoW strategy results in better classification results and why?
 	
-	<img src="./image/hardsum.jpg" alt="hs" width="360px"/> <img src="./image/softsum.jpg" alt="ss" width="360px" /> <img src="./image/softmax.jpg" alt="sm" width="360px"/>
+	<img src="./image/hardsum.jpg" alt="hs" width="280px"/> <img src="./image/softsum.jpg" alt="ss" width="280px" /> <img src="./image/softmax.jpg" alt="sm" width="280px"/>
 
 4. ) Finally, We adopt the k-nearest neighbors classifier (**KNN**) to perform classification
 using the above BoW features.

@@ -6,7 +6,7 @@ This Python Opencv Lab is split into two parts for morning and afternoon.
 2. [Lab_2/](./Lab_2) : Color and Texture Segmentation (Clustering) , Recognition with Bag of Visual Words
 
 ### Reference
-The lab practice referred to [OpenCVtutorial](http://opencv-python-tutroals.readthedocs.io/en/latest/index.html) and NTU DLCV course [website](http://vllab.ee.ntu.edu.tw/dlcv.html).
+The lab practice referred to [OpenCVtutorial](http://opencv-python-tutroals.readthedocs.io/en/latest/index.html) and NTU Deep Learning for Computer Vision (DLCV) course [website](http://vllab.ee.ntu.edu.tw/dlcv.html).
 
 ### Prerequisites
 - python3.5+
