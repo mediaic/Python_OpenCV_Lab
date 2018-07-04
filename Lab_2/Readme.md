@@ -67,11 +67,11 @@ You can only use the python packages below:
 	-----------------------------------------------------------
 	**hint 1**: How to plot the image after clustering?
 	
-	(1) Map the class number to any number between 0~255 (If the number are too near, the colors will be similar.)
+	(1) Map the class number to any number between 0~255 (If the numbers are too close, the colors will be similar.)
 	
-	(2) `picture = cv2.applyColorMap( mapped image , cv2.COLORMAP_JET <- can change )`
+	(2) `picture = cv2.applyColorMap( mapped image , cv2.COLORMAP_JET <- can change )`  [reference](https://www.learnopencv.com/applycolormap-for-pseudocoloring-in-opencv-c-python/)
 	
-	**hint 2**:  How to read and process the filterBank.mat ?
+	**hint 2**:  How to read and process the filterBank.mat?
 	
 	(1) `scipy.io.loadmat( .mat file )` <- Be careful about the return type.
 	
