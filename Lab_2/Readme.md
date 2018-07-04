@@ -39,7 +39,7 @@ You can only use the python packages below:
 ### Problems
 
 1. **Color Segmentation** :    Given an RGB color image of size n = w × h pixels, each pixel can be viewed as a three dimensional feature. For this task, please run the **k-means** clustering algorithm* to cluster these n pixels (in terms of their 3D features) into k groups. 
-
+	
 	(*Use k=10 and maximum number of iterations = 1000)
 
 	**(a)**. Plot the segmentation results for both images based on your clustering results.For visualization purposes, pixels in the same group should be represented by the same color, while those in different groups are shown in distinct colors, as shown above. Some tips are shown in **hint 1** below. 
@@ -62,6 +62,7 @@ You can only use the python packages below:
 
 	[zebra-combine.jpg],[mountain-combine.jpg]
 	
+	-----------------------------------------------------------
 	**hint 1**: How to plot the image after clustering?
 	
 	(1) Map the class number to any number between 0~255 (If the number are too near, the colors will be similar.)
@@ -74,8 +75,32 @@ You can only use the python packages below:
 	
 	(2) Because it contains 38  49x49 filters, you can use `np.transpose( array, (2,0,1) )`
 
-	**hint 3**: How to padding?
+	**hint 3**: How to do padding?
 	
 	You can use `cv2.copyMakeBorder()`    
 
 ## 2. Recognition with Bag of Visual Words 
+
+For this problem you will implement a basic image-based bag-of-words (BoW) model for a scene image dataset with 5 categories. And use this to do KNN classification.
+
+### Dataset
+-	Train-100 : This dataset consists of 100 images X 5 categories = 500 images in total.
+-	Test-100 : This dataset consists of 100 images X 5 categories = 500 images in total.
+
+### Problems
+
+1.  Randomly pick an image from Train-100. Detect interest points and calculate their descriptors for this image using **SURF**. The feature dimension is set to be 128. Plot your interest point detection results. (eg., image with the 50 most dominant interest points detected).   [surf.jpg]
+
+	**hint** : You can read this [tutorial](https://docs.opencv.org/3.4/df/dd2/tutorial_py_surf_intro.html) for using SURF. You can use `surf.setEntended(True/False)` to change feature dimention.
+
+2. Now you will learn a “dictionary” consisting of “visual words”. Please extract
+the detected interest points from all of the 500 images in Train-100, and stack them
+into a N × d matrix, where N denotes the total number of interest points and d is the
+dimension of its descriptor. Use **k-means algorithm** to divide these interest points into
+C clusters (you may simply choose C = 50 and maximum number of iterations = 5000
+for simplicity). The centroid of each cluster then indicates a visual word.
+**Note : save the 50 visual words to the binary file [visual_words.npy] with numpy serialization saving method.** 
+
+3. With the derived dictionary of visual words, you can now represent each training and test image as BoW features. When encoding the interest points into BoW, three different strategies will be considered: **Hard-Sum**, **Soft-Sum**, and **Soft-Max**, as we detail below.
+
+	<img src="./image/BOW.png" alt="zebra"/>
