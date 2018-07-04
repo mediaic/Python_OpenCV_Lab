@@ -101,6 +101,10 @@ C clusters (you may simply choose C = 50 and maximum number of iterations = 5000
 for simplicity). The centroid of each cluster then indicates a visual word.
 **Note : save the 50 visual words to the binary file [visual_words.npy] with numpy serialization saving method.** 
 
-3. With the derived dictionary of visual words, you can now represent each training and test image as BoW features. When encoding the interest points into BoW, three different strategies will be considered: **Hard-Sum**, **Soft-Sum**, and **Soft-Max**, as we detail below.
+3. With the derived dictionary of visual words, you can now represent each training and test image as BoW features. When encoding the interest points into BoW, three different strategies will be considered: **Hard-Sum**, **Soft-Sum**, and **Soft-Max**, as we detail below:
 
-	<img src="./image/BOW.png" alt="zebra"/>
+	<img src="./image/BOW.png" alt="bow"/>
+	
+	Now compute BoW of training images in Train-100, resulting in a 500×c matrix. Choose one image from each category (5 images) and plot their **Hard-Sum**, **Soft-Sum**, and **Soft-Max**, respectively. Can you expect which BoW strategy results in better classification results and why?
+	
+	<img src="./image/hardsum.png" alt="hs"/> <img src="./image/softsum.png" alt="ss"/> <img src="./image/softmax.png" alt="sm"/>
