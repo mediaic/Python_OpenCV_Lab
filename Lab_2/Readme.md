@@ -111,7 +111,8 @@ for simplicity). The centroid of each cluster then indicates a visual word.
 	
 	<img src="./image/hardsum.jpg" alt="hs" width="280px"/> <img src="./image/softsum.jpg" alt="ss" width="280px" /> <img src="./image/softmax.jpg" alt="sm" width="280px"/>
 
-  **hint** : You can use `matplotlib.pyplot.bar()` to plot the figure
+    
+    **hint** : You can use `matplotlib.pyplot.bar()` to plot the figure
 
 4. Finally, We adopt the k-nearest neighbors classifier (**KNN**) to perform classification
 using the above BoW features.
