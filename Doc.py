@@ -50,6 +50,38 @@ KNN.predict(X_test)
 # 直接告訴你acc 
 KNN.score(X_test,Y_test)
 
+## Useful function
+def psnr(target, ref):
+    target_data = np.array(target, dtype=np.float64)
+    ref_data = np.array(ref,dtype=np.float64)
+
+    diff = ref_data - target_data
+    diff = diff.flatten()
+    rmse = math.sqrt(np.mean(diff ** 2.))
+    return 20 * math.log10(255 / (rmse+1e-7))
+def noisy(noise_typ,image):
+    if noise_typ == "gauss":
+        # TODO
+        noisy = image + gauss
+        return noisy
+
+    elif noise_typ == "s&p":
+        row,col = image.shape
+        s_vs_p = 0.5
+        amount = 0.01
+        out = np.copy(image)
+        # Salt mode
+        num_salt = np.ceil(amount * image.size * s_vs_p)
+        coords = # TODO  #Use np.random.randint to generate the noise coordinate
+        out[coords] = 255
+      
+        # Pepper mode
+        num_pepper = np.ceil(amount* image.size * (1. - s_vs_p))
+        coords = # TODO
+        out[coords] = 0
+        return out
+def mse(raw,recon):
+    return ((raw-recon) **2).mean()
 #-----------------Lab2-----------------------
 ## Opencv
 # ColorMap
