@@ -22,23 +22,24 @@ You can only use the python packages below:
  - cv2 (opencv)
  - matplotlib
  - sklearn
+ - math
 
 ## 1. Image Operation
 
-1.	Load "**fig.jpg**"
+1.	Load "**fig.jpg**" and try to plot it.
 2.	Resize the image (**fig.jpg**) with scaling factor = 0.25 and try different interpolation methods.
 	
 	- cv2.INTER_NEAREST&nbsp;&nbsp;&nbsp;  [fig_1.jpg] 
 	- cv2.INTER_LINEAR     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  [fig_2.jpg] 
 	- cv2.INTER_CUBIC     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  [fig_3.jpg]
-3. Resize the image (**fig_3.jpg**) with scaling factor = 4 and try different interpolation methods.
+3. Resize the second image (**fig_2.jpg**) with scaling factor = 4 and try different interpolation methods.
 	
 	- cv2.INTER_NEAREST&nbsp;&nbsp;&nbsp;  [fig_4.jpg] 
 	- cv2.INTER_LINEAR     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  [fig_5.jpg] 
 	- cv2.INTER_CUBIC     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  [fig_6.jpg]
-4.  Convert the color space to *YCbCr* for the upsampled images and the <u>original image</u>, and compute **PSNR** values for "**Y**" channel to the original image (**fig.jpg**).
+4.  Convert the color space to *YCbCr* for the upsampled images and the <u>original image</u>, and compute **PSNR** values for "**Y**" channel to the original image (**fig.jpg**). (FLAG: `cv2.COLOR_BGR2YCR_CB`)
 
-**Q**: Which one performs better?
+**Q**: Which upsampling method performs better?
 
 ## 2. Image Smoothing
 1.	Load "**fig.jpg**" with **gray** scale.
@@ -61,16 +62,17 @@ You can only use the python packages below:
 2.	 **Gaussian noise** [fig_gau.jpg]
 		- mean = 0, std = 5
 		- hint: *np.random.normal()*
+		- hint: Be careful to convert 'float64' to 'uint8'
 3.	 **Salt and Pepper noise** [fig_sp.jpg]
 		- s vs p : 50% for each,  all_noise_amount = 1%
 		- hint: use *np.random.randint()* to generate the salt or pepper coordinates
 		- salt =255,  pepper = 0	
 ### Denoise
-4. Apply **Gaussian filter** and **Median filter** on  the image with Gaussian noise. 
+4. Apply **Gaussian filter** and **Median filter** on  the image with Gaussian noise. [gau_gau.jpg] [median_gau.jpg]
 
 	**Q** :Which one  performs better?
 	
-5. Apply **Gaussian filter** and **Median filter** on  the image with Salt&Pepper noise.
+5. Apply **Gaussian filter** and **Median filter** on  the image with Salt&Pepper noise. [gau_sp.jpg] [median_sp.jpg]
 
 	**Q** :Which one  performs better?
 
