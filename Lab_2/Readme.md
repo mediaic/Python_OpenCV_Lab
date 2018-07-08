@@ -24,7 +24,7 @@ This is the simplified version of NTU Deep Learning for Computer Vision (DLCV) c
 **Requirement**
 
 You can only use the python packages below:
-
+ - python standard library
  - numpy
  - cv2 (opencv)
  - matplotlib
@@ -91,7 +91,7 @@ For this problem you will implement a basic image-based bag-of-words (BoW) model
 
 ### Problems
 
-1.  Randomly pick an image from Train-100 (Load with **gray** scale). Detect interest points and calculate their descriptors for this image using **SURF**. The feature dimension is set to be 128. Plot your interest point detection results. (eg., image with the 50 most dominant interest points detected).   [surf.jpg]
+1.  Randomly pick an image from Train-100 (Load with **gray** scale). Detect interest points and calculate their descriptors for this image using **SURF**. The feature dimension is set to be 128. Plot your interest point detection results. (eg., image with the 30 most dominant interest points detected).   [surf.jpg]
 
 	**hint** : You can read this [tutorial](https://docs.opencv.org/3.4/df/dd2/tutorial_py_surf_intro.html) for using SURF. You can use `surf.setEntended(True/False)` to change feature dimention.
 
@@ -99,9 +99,11 @@ For this problem you will implement a basic image-based bag-of-words (BoW) model
 the detected interest points from all of the 500 images in Train-100, and stack them
 into a N × d matrix, where N denotes the total number of interest points and d is the
 dimension of its descriptor. Use **k-means algorithm** to divide these interest points into
-C clusters (you may simply choose C = 50 and maximum number of iterations = 5000
-for simplicity). The centroid of each cluster then indicates a visual word.
-**Note : save the 50 visual words to the binary file [visual_words.npy] with numpy serialization saving method.** 
+C clusters (you may simply choose C = 50 and maximum number of iterations = 500
+for simplicity, and use n_jobs=-1 to accelerate). The centroid of each cluster then indicates a visual word.
+
+**Note** : The threshold of SURF is up to you, but you have to ensure that every image has at least one feature point.
+**Note** : save the 50 visual words to the binary file [visual_words.npy] with numpy serialization saving method.
 
 3. With the derived dictionary of visual words, you can now represent each training and test image as BoW features. When encoding the interest points into BoW, three different strategies will be considered: **Hard-Sum**, **Soft-Sum**, and **Soft-Max**, as we detail below:
 
