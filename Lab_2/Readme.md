@@ -104,7 +104,7 @@ for simplicity, and use n_jobs=-1 to accelerate). The centroid of each cluster t
 
 	**Note** : The threshold of SURF is up to you, but you have to ensure that every image has at least one feature point.
 
-　	**Note** : save the 50 visual words to the binary file [visual_words.npy] with numpy serialization saving method.
+	**Note** : save the 50 visual words to the binary file [visual_words.npy] with numpy serialization saving method.
 
  	**hint** : `kmeans.cluster_centers_` is useful
 	
