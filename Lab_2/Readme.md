@@ -58,11 +58,11 @@ You can only use the python packages below:
 	
 	**(a)** Plot the texture segmentation results.   
 	
-	[zebra-tex.jpg],[mountain-tex.jpg] 
+	[zebra_tex.jpg],[mountain_tex.jpg] 
 
 	**(b)** Combine both color (**Lab** color space) and texture features (3+38 = 41-dim features) for image segmentation. Repeat the clustering procedure and plot your segmentation results. 
 
-	[zebra-combine.jpg],[mountain-combine.jpg]
+	[zebra_combine.jpg],[mountain_combine.jpg]
 	
 	-----------------------------------------------------------
 	**hint 1**: How to plot the image after clustering?
@@ -91,7 +91,7 @@ For this problem you will implement a basic image-based bag-of-words (BoW) model
 
 ### Problems
 
-1.  Randomly pick an image from Train-100. Detect interest points and calculate their descriptors for this image using **SURF**. The feature dimension is set to be 128. Plot your interest point detection results. (eg., image with the 50 most dominant interest points detected).   [surf.jpg]
+1.  Randomly pick an image from Train-100 (Load with **gray** scale). Detect interest points and calculate their descriptors for this image using **SURF**. The feature dimension is set to be 128. Plot your interest point detection results. (eg., image with the 50 most dominant interest points detected).   [surf.jpg]
 
 	**hint** : You can read this [tutorial](https://docs.opencv.org/3.4/df/dd2/tutorial_py_surf_intro.html) for using SURF. You can use `surf.setEntended(True/False)` to change feature dimention.
 
