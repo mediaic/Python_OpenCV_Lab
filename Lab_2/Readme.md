@@ -102,9 +102,12 @@ dimension of its descriptor. Use **k-means algorithm** to divide these interest 
 C clusters (you may simply choose C = 50 and maximum number of iterations = 500
 for simplicity, and use n_jobs=-1 to accelerate). The centroid of each cluster then indicates a visual word.
 
-**Note** : The threshold of SURF is up to you, but you have to ensure that every image has at least one feature point.
-**Note** : save the 50 visual words to the binary file [visual_words.npy] with numpy serialization saving method.
+	**Note** : The threshold of SURF is up to you, but you have to ensure that every image has at least one feature point.
 
+　	**Note** : save the 50 visual words to the binary file [visual_words.npy] with numpy serialization saving method.
+
+ 	**hint** : `kmeans.cluster_centers_` is useful
+	
 3. With the derived dictionary of visual words, you can now represent each training and test image as BoW features. When encoding the interest points into BoW, three different strategies will be considered: **Hard-Sum**, **Soft-Sum**, and **Soft-Max**, as we detail below:
 
 	<img src="./image/BOW.png" alt="bow"/>
