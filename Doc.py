@@ -28,7 +28,7 @@ cv2.resize()
 ## Color space 
 cv2.cvtColor()
 ## smoothing
-cv2.blur(),cv2.GaussianBlur(),cv2.mediaBlur()
+cv2.blur(),cv2.GaussianBlur(),cv2.medianBlur()
 ## PCA Compute
 mean,eigenvectors = cv2.PCACompute(matrix,mean=None)
 
@@ -38,6 +38,8 @@ np.min(), np.max()
 np.dot()
 ## flatten
 np.flatten()
+## stack list of array
+np.stack(np_list)
 
 ## KNN
 from sklearn.neighbors import KNeighborsClassifier
