@@ -51,6 +51,7 @@ The dataset you need is under `Face_dataset/` directory, which contains 56×46 p
 1. Perform PCA on the **training set**. Save the **mean face** and the first **three** eigenfaces.
 	- save to [mean.png], [1.png], [2.png], [3.png]
 	- Be careful the values in eigenvectors after PCA !  (*cv2.PCACompute()*)
+	- Bonus: you can implement your own PCA function !!
 	- hint: 　255 * (shifted **x**/ max(shifted **x**))
 
 2. Take **7_2.png**, and project it onto the above PCA eigenspace. Reconstruct this image using the first n = 3, 100 eigenfaces. For each n, compute the mean square error (MSE) between the reconstructed face image and **7_2.png**. Please save these reconstructed images, and record the corresponding MSE values.
