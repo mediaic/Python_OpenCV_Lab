@@ -2,7 +2,7 @@
 
 ## Description
 This Python Opencv Lab is split into two parts.
-1. [Lab_1/](./Lab_1) : Image Operation, Image Filtering, Image PCA & Classification
+1. [Lab_1/](./Lab_1) : Image Filtering, Image PCA & Classification
 2. [Lab_2/](./Lab_2) : Homography
 
 ### Briefly Introduction
