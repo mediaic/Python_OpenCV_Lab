@@ -18,7 +18,7 @@ This is part of HW3 in NTU Computer Vision: from Recognition to Geometry (CV) co
 You can only use the python packages below:
  - python standard library
  - numpy
- - cv2 (opencv)
+ - cv2 (opencv) excluding `cv2.findhomography`
 
 ## Unwarp the screen
 
