@@ -70,7 +70,7 @@ def warping(src, dst, H, ymin, ymax, xmin, xmax):
 def main():
 
     # Input Initialization 
-	corners = np.array([[190, 106], [256, 142], [193, 244], [258, 285]]) # Points [[x1,y1], [x2,y2], [x3,y3], [x4,y4]]
+	corners = np.array([[522, 572], [1065, 961], [572, 1273], [1174, 1631]]) # Points [[x1,y1], [x2,y2], [x3,y3], [x4,y4]]
 	img_path = './screen.jpg'
 
     # Output initialization (create an output array to save the result)
